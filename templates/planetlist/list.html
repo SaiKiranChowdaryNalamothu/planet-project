@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Planet list</title>
+
+    <style media="screen">
+      body
+      {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url({% static 'images/planet1.jpg' %});
+        background-attachment: fixed;
+      }
+
+    #input
+    {
+      cursor:pointer;
+      width:17px;
+      height:17px;
+    }
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+<div style="text-align:center">
+<marquee direction="right" height= 100px width=55%   behavior="alternate" scrollamount="4">
+    <marquee direction="down" height=100px width=auto behavior="alternate" scrollamount="4"> <font size=20px color=red>Planets List Tab</font> </marquee>
+</marquee>
+</div>
+
+<form class="" action="{% url 'view' %}" method="post" target='_new'>
+ {% csrf_token %}
+<div style="margin:100px 13%;" >
+  <p style="color:white;font-size:18px;"> Note : Select your <strong>favourite planet</strong> and click on "<strong> <u>View Favourite List</u> </strong>" Button to view the next tab </p>
+<input id="input" type="checkbox" autocomplete="off" name="mercury" value="Mercury"><h2 style="display:inline;color:yellow"> Mercury </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="venus" value="Venus"> <h2 style="display:inline;color:yellow"> Venus </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="earth" value="Earth"> <h2 style="display:inline;color:yellow"> Earth </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="mars" value="Mars"> <h2 style="display:inline;color:yellow"> Mars </h2> <br>
+<input id="input" type="checkbox" autocomplete="off" name="jupiter" value="Jupiter"> <h2 style="display:inline;color:yellow"> Jupiter </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="satrun" value="Satrun"> <h2 style="display:inline;color:yellow"> Satrun </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="uranus" value="Uranus"> <h2 style="display:inline;color:yellow"> Uranus </h2>  <br>
+<input id="input" type="checkbox" autocomplete="off" name="neptune" value="Neptune"> <h2 style="display:inline;color:yellow"> Neptune </h2>  <br><br>
+<input  type="submit" style="background-color:pink;border-radius:20px;padding:10px;cursor:pointer"name="" value="View Favourite List">
+</div>
+
+</form>
+
+
+
+<h3 style="position:fixed;bottom:25px;right:15px;color:white;font-family:'lucida handwriting'"> By Sai Kiran Nalamothu </h3>
+<h3 style="position:fixed;bottom:5px;right:15px;color:white"> (saikirannalamothu234@gmail.com) </h3>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Favourite list</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <style media="screen">
+      body
+      {
+        background-image: url({% static 'images/image.jpg' %});
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+
+
+
+
+  </head>
+  <body>
+    <h1 style="text-align:center">  </h1>
+
+    <div style="text-align:center">
+    <marquee direction="right" height= 100px width=95%  behavior="alternate" scrollamount="5"> <font size=20px color=#87d108>your favourite list is here!</font> </marquee>
+    </div>
+
+<div style="margin-left:10%">
+<h1 style="color:orange;">{{head}}</h2>
+  <ul>
+  {% for x in list %}
+
+<h2 style="color:#d9baa9;"> <li>{{x}}</li>  </h2>
+
+  {% endfor %}
+  </ul>
+
+<div>
+
+
+<h3 style="position:fixed;bottom:25px;right:15px;color:white;font-family:'lucida handwriting'"> By Sai Kiran Nalamothu </h3>
+<h3 style="position:fixed;bottom:5px;right:15px;color:white"> (saikirannalamothu234@gmail.com) </h3>
+
+<script type="text/javascript">
+
+
+
+
+</script>
+
+
+  </body>
+</html>
